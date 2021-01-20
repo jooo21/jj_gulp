@@ -1,0 +1,1322 @@
+
+
+body {
+    background:#f2f2f2;
+}
+
+
+
+#header_sub {
+   width: 100%;position: relative;z-index:3;border-bottom:0.5px solid #e9e4dc;
+
+   .inner {
+       width: 1180px;height:100px;margin:0px auto;position: relative;
+
+       &::after {
+        content:""; display: block; clear: both;
+        }
+
+        >h1 {
+            float:left;width:15%;box-sizing:border-box;
+            padding-top:35px;
+            
+           a {
+            font:bold 40px/60px "Cormorant Infant";color: #555;
+            box-sizing: border-box;
+
+           }
+
+        }
+        .util {
+            position: absolute;right:0px;
+            width:35%;
+            top:10px;
+            float:right;
+            >li{
+                width:25%;
+                height:30px;
+                float: left;
+                text-align: center;
+                a{
+                    display: block; width:100%;
+                    color:#ada699;
+                    letter-spacing: 1px;
+                }
+                &:nth-of-type(1) { 
+                    margin-left:0%;
+                    a>i {
+                        text-align: center;
+                        font-size:10px;
+                        transition:0.3s;
+                        line-height:30px;
+                        margin:0px;
+
+                    }
+                }
+                &:nth-of-type(2) {
+                    
+                    a{
+                        display:block;position:relative;
+                        font:300 10px/30px "Jost";
+                        &::before{
+                            position:absolute;left:0;top:50%;margin-top:-6px;
+                            content: "";display: block;width:1px;height:12px;
+                            background:#ada69980;
+                        }
+                        
+                    }
+                }
+                &:nth-of-type(3) {
+                    a{
+                        display: inline;
+                        border:1px solid #ada69980;
+                        font:300 10px/24px "Jost";
+                        padding:3px 20px;transition:0.5s;
+                        box-sizing: border-box;
+                        letter-spacing: 2px;
+                        &:hover{
+                            background:#ada69980;
+                            color:#f2f2f2;border:none;
+                        }
+                    }
+                }
+                &:nth-of-type(4) {
+                    select {
+                        background:#f2f2f2;
+                        color: #ada699;
+                        font:300 10px/20px "Jost";
+                        border:none;
+                        padding:5px;
+                    }
+                }
+                &:hover {
+                    i{
+                        color:#d8691e;
+                    }
+                    
+                    border-color:#d8691e ;
+                }
+                
+            }
+       }
+        .moGnb {
+            display:none; width:30px; height:30px;position: absolute;
+            right:0px;top:50%;margin-top:-15px;
+            span{
+                display:block; width:80%; height:2px; background:#777; position:absolute; top:50%; left:6px; margin-top:-1px; text-indent:-9999px; transition:0.5s;border-radius: 1px;
+            }
+            &::before {
+                content:""; display:block; width:100%; height:2px; background:#777; position:absolute; top:0px; left:0px;
+                 transition:top 0.5s 0s, transform 0.5s 0.5s;border-radius: 1px;
+            }
+            &::after {
+                content:""; display:block; width:100%; height:2px; background:#777; position:absolute; bottom:0px; left:0px;
+                transition:bottom 0.5s 0s, transform 0.5s 0.5s;border-radius: 1px;
+            }
+
+            &.on{
+                span{
+                transform:translateX(100%); opacity:0;
+                }
+                &::before {
+                    top:calc(50% - 1px); transform:rotate(45deg);
+                }
+                &::after {
+                    bottom:calc(50% - 1px); transform:rotate(-45deg);
+                }
+            }    
+        }
+        #gnb {
+           width:85%;float:left;position: relative;
+           border-left:1px solid #e9e4dc;box-sizing:border-box;
+           padding-top: 40px;
+            &::after {
+                content:""; display: block; clear: both;
+                }
+            >li{
+                float: left;
+                width:(100%/7);
+                >a {
+                    display: block;position:relative; width:100%; height: 60px;box-sizing:border-box;
+                    font:300 14px/60px "Jost"; color:#555;
+                    transition:0.5s;text-align:center;cursor:pointer;
+                   &::after {
+                       content:""; position:absolute; z-index:5;left:50%; bottom:-4px;transform:translateX(-50%) scaleX(0);
+                       transform-origin: center; width: 14px; height:7px; border-radius:3.5px;background-color:#e9e4dc;
+                       transition:0.25s;
+                   }
+                    &:hover, &.on {
+                        &::after{
+                            transform: translateX(-50%) scaleX(1);
+                        }
+                        color:#ada699;
+                    }
+                    
+                }
+                .sub {
+                    position: absolute;z-index:3; 
+                    width: 100%;
+                    height:430px;
+                    left:0px;
+                    top: 101px; 
+                    display: none;
+                    border-right:1px solid #e9e4dc;
+                    border-bottom:1px solid #e9e4dc;
+                    padding:50px 10px;
+                    box-sizing:border-box;
+                    background:#f2f2f2;
+                    
+                    &::after {
+                        content:""; display:block; clear:both;
+                    }
+                }
+                &:nth-of-type(1) {
+                    .sub{
+                        .subLeft{
+                            width:25%;height:300px;float:left;margin-top:30px;position: relative;transform:translateX(-90%);
+                            >h2 {
+                                font:300 30px/1 'Jost'; color:#777;
+                                margin-bottom:6px;
+                            }
+                            >span {
+                                display:block;
+                                font: 300 12px/1 'Jost';color:#ada699;
+                                margin-bottom:40px;
+                            }
+                            >div {
+                                width:200px; height:160px;
+                                background:url(../img/de2.jpg) no-repeat center/cover;
+                                filter:contrast(60%) brightness(1.3);
+    
+                            }
+                            &::before {
+                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                position:absolute;
+                                letter-spacing: 3px;
+                                bottom:49%; left:-80%;
+                                font: 200 8px/1 'Jost';color:#ada699;
+                                transform: rotate(-90deg);
+                            }
+                            &::after {
+                                content:"01";display: block;
+                                position:absolute;
+                                bottom:0px; right:0px;
+                                font: 200 14px/1 'Jost';color:#ada699;
+                            }
+                        }
+                        .subMid1 {
+                            width:45%;height:240px; float:left;box-sizing:border-box;
+                            padding:0px 10px;margin-top:10px;
+                            transform: translateX(-25%);
+                            >h2 {
+                                font:300 14px/40px 'Jost';transition:0.5s;
+                                color:#ada699;
+                                margin-top:10px;
+                                position:relative;
+                                transform:translateX(-20%);
+                            }
+                            >div {
+                                width:33%;float:left;
+                                height:200px;
+                                position:relative;
+                                &:nth-of-type(1){
+                                    >div {
+                                        position:absolute;z-index:3;
+                                        top:40%; left:30%;
+                                        width:150px; height:150px;
+                                        border-radius: 75px;
+                                        background:#ddd8ce75;
+                                    }
+                                    >span {
+                                        display: block;
+                                        width:100%;
+                                        font: 300 20px/1 'Jost';color:#3a3a50;
+                                        text-align: center;
+                                        position:absolute;
+                                        top:70%; left:33%;
+                                        padding: 0px 20px;
+                                        box-sizing: border-box;
+                                        &::after {
+                                            content:"SNS Concept -------------";display: block;
+                                            font: 300 10px/1 'Jost';
+                                            color:#3a3a50;
+                                            position:absolute;
+                                            left:-60%;top:20%;
+                                        }
+                                        >em {
+                                            display: block;
+                                            font: 300 10px/1.2 'Noto Sans KR', sans-serif;
+                                            color:#ada699;
+                                            margin-top:10px
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    >div {
+                                        position:absolute;z-index:1;
+                                        top:-10%; left:50%;
+                                        width:160px; height:160px;
+                                        border-radius: 80px;
+                                        background:#3a3a50e3;
+                                        transform: translateX(-50%);
+                                    }
+                                    >span {
+                                        display: block;
+                                        width:100%;
+                                        font: 300 20px/1 'Jost';color:#fff;
+                                        text-align: center;
+                                        position:absolute;z-index:1;
+                                        top:20%; left:50%;
+                                        transform: translateX(-50%);
+                                        padding: 0px 20px;
+                                        box-sizing: border-box;
+                                        ;
+                                        >em {
+                                            display: block;
+                                            font: 300 10px/1 'Noto Sans KR', sans-serif;
+                                            color:#ada699;
+                                            margin-top:10px
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(3){
+                                    >div {
+                                        position:absolute;z-index:3;
+                                        top:40%; right:30%;
+                                        width:150px; height:150px;
+                                        border-radius: 75px;
+                                        background:#ddd8ce75;
+                                    }
+                                    >span {
+                                        display: block;
+                                        width:100%;
+                                        font: 300 20px/1 'Jost';color:#3a3a50;
+                                        text-align: center;
+                                        position:absolute;
+                                        top:70%; right:33%;
+                                        padding: 0px 20px;
+                                        box-sizing: border-box;
+                                        &::after {
+                                            content:"------------- Promotion Concept";display: block;
+                                            font: 300 10px/1 'Jost';
+                                            color:#3a3a50;
+                                            position:absolute;
+                                            right:-77%;top:25%;
+                                        }
+                                        >em {
+                                            display: block;
+                                            font: 300 10px/1 'Noto Sans KR', sans-serif;
+                                            color:#ada699;
+                                            margin-top:10px
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            
+                            a {
+                                display:block;
+                                width:100px;height:24px;
+                                padding:10px 30px 10px 20px;
+                                color:#d8681e;
+                                font: 300 12px/25px 'Jost';
+                                margin-top:240px;
+                                transform:translateX(230%);
+                                em {
+                                    font:300 10px/35px 'Jost';
+                                    color:#333;
+                                    
+                                }
+                                &:hover,&:focus{
+                                    color:#ada699;
+                                    font-weight: 500;
+                                    // background:#ddd8ce;
+
+                                    &::before,&::after {
+                                        right:10px;
+                                        background: #ada699;
+                                    }
+                                }
+                                &::before {
+                                    content:"";display:block;
+                                    position:absolute; right:20px;top:45%;
+                                    width:5px; height:1px;
+                                    transform: rotate(45deg);
+                                    background:#d8681e;
+                                    transition: 0.5s;
+                                }
+                                &::after {
+                                    content:"";display:block;
+                                    position:absolute; right:20px;top:54%;
+                                    width:5px; height:1px;
+                                    transform: rotate(-45deg);
+                                    background:#d8681e;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                        >ul {
+                            width:30%;float:right;position:relative;
+                            margin-top: 20px;
+                            &::before {
+                                        content:""; display:block;
+                                        width:1px; height:115%;
+                                        position:absolute;
+                                        background:#e9e4dc;
+                                        left:-10%;top:-18%;
+                                    }
+                            p {
+                                font:300 14px/40px 'Jost';
+                                text-align: center;
+                                color:#d8681e;
+                                margin-bottom:40px;
+    
+                            }
+                            li {
+                                width:50%;height:40px;float:left;
+                                a{  
+                                    display:block;width:100%; height:100%;position:relative;overflow: hidden;color:#999;
+                                    text-align:center;
+                                    font:300 13px/40px 'Jost';transition:0.1s;
+                                    
+                                    &::after {
+                                        content:""; position:absolute;left:10%; top:50%;transform:translateY(-50%); width: 6%; height:0.5px; border-radius:2px;background-color:#ada69985;
+                                        transition:0.25s;
+                                    
+                                    }
+                                    &::before {
+                                        content:""; display:block;
+                                        width: 0px;height: 0px;
+                                        border-top:4px solid none;
+                                        border-bottom:4px solid #d8681e;
+                                        border-right: 4px solid transparent;
+                                        border-left: 4px solid  transparent;
+                                        position: absolute;bottom:0px;left:50%;margin-left:-2px;
+                                        transform: translateY(10px);opacity:0;
+                                        transition:0.5s;
+
+                                    }
+                                    &:hover {
+                                        color:#d8681e;
+                                        &::after{
+                                                background-color:#d8681e;
+                                            }
+                                            &::before {
+                                                transform: translateY(-5px);
+                                                opacity:1;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                &:nth-of-type(2) {
+                    .sub{
+                        .subLeft{
+                            width:25%;height:300px;float:left;margin-top:30px;position: relative;transform:translateX(-90%);
+                            >h2 {
+                                font:300 30px/1 'Jost'; color:#777;
+                                margin-bottom:6px;
+                            }
+                            >span {
+                                display:block;
+                                font: 300 12px/1 'Jost';color:#ada699;
+                                margin-bottom:40px;
+                            }
+                            >div {
+                                width:200px; height:160px;
+                                background:url(../img/co1.jpg) no-repeat center/cover;
+                                filter:contrast(40%) brightness(1.6);
+    
+                            }
+                            &::before {
+                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                position:absolute;
+                                letter-spacing: 3px;
+                                bottom:49%; left:-80%;
+                                font: 200 8px/1 'Jost';color:#ada699;
+                                transform: rotate(-90deg);
+                            }
+                            &::after {
+                                content:"02";display: block;
+                                position:absolute;
+                                bottom:0px; right:0px;
+                                font: 200 14px/1 'Jost';color:#ada699;
+                            }
+                        }
+                        .subMid3 {
+                            width:45%;height:240px; float:left;box-sizing:border-box;
+                            padding:0px 10px;transform:translateX(-30%);margin-top:30px;
+                            
+                            >div {
+                                width:100%;height:140px;
+                                background:url(../img/co2.jpg) no-repeat center/cover;
+                                margin-bottom:20px;
+                            }
+                            >h2 {
+                                font: 200 14px/1 'Jost';color:#ada699;
+                                margin-bottom:10px;
+                            }
+                            span {
+                                display: block;
+                                font: 200 11px/1 'Jost';color:#ada699;
+                                margin-bottom:50px;
+                                
+                            }
+                            a {
+                                display: inline-block;position:relative;
+                                padding:0px 10px;height:25px;
+                                color:#ada699;
+                                font: 200 10px/25px 'Jost';
+                                &:hover,&:focus{
+                                    color:#777;
+                                    &::before,&::after {
+                                        right:-10px;
+                                        background: #d8691e;
+                                    }
+                                }
+                                &::before {
+                                    content:"";display: inline-block;
+                                    position:absolute; right:-5px;top:50px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                                &::after {
+                                    content:"";display: inline-block;
+                                    position:absolute; right:-5px;top:53.5px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(-45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                        >ul {
+                            width:30%;float:right;margin-top:20px;
+                            p {
+                                font:300 14px/40px 'Jost';
+                                text-align: center;
+                                color:#d8681e;
+                                margin-bottom:40px;
+    
+                            }
+                            li {
+                                width:50%;height:40px;float:left;
+                                a{  
+                                    display:block;width:100%; height:100%;position:relative;overflow: hidden;color:#999;
+                                    text-align:center;
+                                    font:300 13px/40px 'Jost';transition:0.1s;
+                                    
+                                    &::after {
+                                        content:""; position:absolute;left:10%; top:50%;transform:translateY(-50%); width: 6%; height:0.5px; border-radius:2px;background-color:#ada69985;
+                                        transition:0.25s;
+                                    
+                                    }
+                                    &::before {
+                                        content:""; display:block;
+                                        width: 0px;height: 0px;
+                                        border-top:4px solid none;
+                                        border-bottom:4px solid #d8681e;
+                                        border-right: 4px solid transparent;
+                                        border-left: 4px solid  transparent;
+                                        position: absolute;bottom:0px;left:50%;margin-left:-2px;
+                                        transform: translateY(10px);opacity:0;
+                                        transition:0.5s;
+
+                                    }
+                                    &:hover {
+                                        color:#d8681e;
+                                        &::after{
+                                                background-color:#d8681e;
+                                            }
+                                            &::before {
+                                                transform: translateY(-5px);
+                                                opacity:1;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(3) {
+                    .sub{
+                        .subLeft{
+                            width:25%;height:300px;float:left;margin-top:30px;position: relative;transform:translateX(-90%);
+                            >h2 {
+                                font:300 30px/1 'Jost'; color:#777;
+                                margin-bottom:6px;
+                            }
+                            >span {
+                                display:block;
+                                font: 300 12px/1 'Jost';color:#ada699;
+                                margin-bottom:40px;
+                            }
+                            >div {
+                                width:200px; height:160px;
+                                background:url(../img/li4.jpg) no-repeat center/cover;
+                                filter:contrast(30%) brightness(1.6);
+    
+                            }
+                            &::before {
+                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                position:absolute;
+                                letter-spacing: 3px;
+                                bottom:49%; left:-80%;
+                                font: 200 8px/1 'Jost';color:#ada699;
+                                transform: rotate(-90deg);
+                            }
+                            &::after {
+                                content:"03";display: block;
+                                position:absolute;
+                                bottom:0px; right:0px;
+                                font: 200 14px/1 'Jost';color:#ada699;
+                            }
+                        }
+                        .subMidM1 {
+                            width:45%;height:240px; float:left;box-sizing:border-box;
+                            padding:0px 10px;transform:translateX(-40%);margin-top:30px;
+                            
+                            >div {
+                                width:100%;height:140px;
+                                background:url(../img/co2.jpg) no-repeat center/cover;
+                                margin-bottom:20px;
+                            }
+                            >h2 {
+                                font: 300 25px/1.3 'Jost';color:#ada699;
+                                margin-bottom:50px;
+                                margin-right:100px;
+                                position: relative;
+                                padding: 0px 20px;
+                                box-sizing: border-box;
+                                &::after {
+                                    content: ""; display: block;
+                                    position: absolute;
+                                    right:-65%; top:0%;
+                                    width:310px; height:120px;
+                                    background:#ddd8ce;
+                                }
+                            }
+                            
+                            a {
+                                display:block;position:relative;
+                                width:260px;height:25px;
+                                padding:10px 30px 10px 20px;
+                                color:#ada699;
+                                font: 300 12px/25px 'Jost';
+                                margin-bottom:10px;
+                                transform:translateX(67%);
+                                em {
+                                    font:300 10px/35px 'Jost';
+                                    color:#d8691e;
+                                    
+                                }
+                                &:hover,&:focus{
+                                    color:#333;
+                                    font-weight: 500;
+                                    // background:#ddd8ce;
+
+                                    &::before,&::after {
+                                        right:10px;
+                                        background: #d8691e;
+                                    }
+                                }
+                                &::before {
+                                    content:"";display:block;
+                                    position:absolute; right:20px;top:45%;
+                                    width:5px; height:1px;
+                                    transform: rotate(45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                                &::after {
+                                    content:"";display:block;
+                                    position:absolute; right:20px;top:54%;
+                                    width:5px; height:1px;
+                                    transform: rotate(-45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                        >ul {
+                            width:30%;float:right;position:relative;
+                            margin-top: 20px;
+                            &::before {
+                                        content:""; display:block;
+                                        width:1px; height:115%;
+                                        position:absolute;
+                                        background:#e9e4dc;
+                                        left:-10%;top:-18%;
+                                    }
+                            p {
+                                font:300 14px/40px 'Jost';
+                                text-align: center;
+                                color:#d8681e;
+                                margin-bottom:40px;
+    
+                            }
+                            li {
+                                width:50%;height:40px;float:left;
+                                a{  
+                                    display:block;width:100%; height:100%;position:relative;overflow: hidden;color:#999;
+                                    text-align:center;
+                                    font:300 13px/40px 'Jost';transition:0.1s;
+                                    
+                                    &::after {
+                                        content:""; position:absolute;left:10%; top:50%;transform:translateY(-50%); width: 6%; height:0.5px; border-radius:2px;background-color:#ada69985;
+                                        transition:0.25s;
+                                    
+                                    }
+                                    &::before {
+                                        content:""; display:block;
+                                        width: 0px;height: 0px;
+                                        border-top:4px solid none;
+                                        border-bottom:4px solid #d8681e;
+                                        border-right: 4px solid transparent;
+                                        border-left: 4px solid  transparent;
+                                        position: absolute;bottom:0px;left:50%;margin-left:-2px;
+                                        transform: translateY(10px);opacity:0;
+                                        transition:0.5s;
+
+                                    }
+                                    &:hover {
+                                        color:#d8681e;
+                                        &::after{
+                                                background-color:#d8681e;
+                                            }
+                                            &::before {
+                                                transform: translateY(-5px);
+                                                opacity:1;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(4) {
+                    .sub {
+                        .subLeft{
+                            width:25%;height:300px;float:left;margin-top:30px;position: relative;transform:translateX(-90%);
+
+                            >div {
+                                width:200px; height:160px;
+                                background:url(../img/faq1.jpg) no-repeat center/cover;
+                                filter:contrast(20%) brightness(1.6);
+    
+                            }
+                            >h2 {
+                                font:300 30px/1 'Jost'; color:#777;
+                                margin-bottom:6px;
+                            }
+                            >span {
+                                display:block;
+                                font: 300 12px/1 'Jost';color:#ada699;
+                                margin-bottom:40px;
+                            }
+                            &::before {
+                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                position:absolute;
+                                letter-spacing: 3px;
+                                bottom:49%; left:-80%;
+                                font: 200 8px/1 'Jost';color:#ada699;
+                                transform: rotate(-90deg);
+                            }
+                            &::after {
+                                content:"04";display: block;
+                                position:absolute;
+                                bottom:0px; right:0px;
+                                font: 200 14px/1 'Jost';color:#ada699;
+                            }
+                        }
+                        .subMid1 {
+                            width:20%;height:240px; float:left;box-sizing:border-box;
+                            padding:0px 10px;transform:translateX(-60%);margin-top:30px;
+                            
+                            >div {
+                                width:100%;height:140px;
+                                background:url(../img/faq2.jpg) no-repeat center/cover;
+                                filter:contrast(20%) brightness(1.55);
+                                margin-bottom:20px;
+                            }
+                            >h2 {
+                                font: 200 14px/1 'Jost';color:#ada699;
+                                margin-bottom:10px;
+                            }
+                            span {
+                                display: block;
+                                font: 200 11px/1 'Jost';color:#ada699;
+                                margin-bottom:50px;
+                                
+                            }
+                            a {
+                                display: inline-block;position:relative;
+                                padding:0px 10px;height:25px;
+                                color:#ada699;
+                                font: 200 10px/25px 'Jost';
+                                &:hover,&:focus{
+                                    color:#777;
+                                    &::before,&::after {
+                                        right:-10px;
+                                        background: #d8691e;
+                                    }
+                                }
+                                &::before {
+                                    content:"";display: inline-block;
+                                    position:absolute; right:-5px;top:50px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                                &::after {
+                                    content:"";display: inline-block;
+                                    position:absolute; right:-5px;top:53.5px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(-45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                        .subMid2 {
+                            width:20%; height:240px; float:left;box-sizing:border-box;
+                            padding:0px 10px;transform:translateX(-40%);
+                            margin-top:30px;
+                            >div {
+                                width:100%;height:140px;
+                                background:url(../img/faq3.jpg) no-repeat center/cover;
+                                filter:contrast(20%) brightness(1.6);
+                                margin-bottom: 20px;
+                            }
+                            >h2 {
+                                font: 200 14px/1 'Jost';color:#ada699;
+                                margin-bottom: 10px;
+                            }
+                            span {
+                                display:block;
+                                font: 200 11px/1 'Jost';color:#ada699;
+                                margin-bottom: 50px;
+                            }
+                            a {
+                                display: inline-block;position:relative;
+                                padding:0px 10px;height:25px;
+                                color:#ada699;
+                                font: 200 10px/25px 'Jost';
+                                &:hover,&:focus{
+                                    color:#777;
+                                    &::before,&::after {
+                                        right:-10px;
+                                        background: #d8691e;
+                                    }
+                                }
+                                &::before {
+                                    content:"";display: inline-block;
+                                    position:absolute; right:-5px;top:50px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                                &::after {
+                                    content:"";display: inline-block;
+                                    position:absolute; right:-5px;top:53.5px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(-45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                        >ul {
+                            width:30%;float:right;margin-top:20px;
+                            p {
+                                font:300 14px/40px 'Jost';
+                                text-align: center;
+                                color:#d8681e;
+                                margin-bottom:40px;
+    
+                            }
+                            li {
+                                width:50%;height:40px;float:left;
+                                a{  
+                                    display:block;width:100%; height:100%;position:relative;overflow: hidden;color:#999;
+                                    text-align:center;
+                                    font:300 13px/40px 'Jost';transition:0.1s;
+                                    
+                                    &::after {
+                                        content:""; position:absolute;left:10%; top:50%;transform:translateY(-50%); width: 6%; height:0.5px; border-radius:2px;background-color:#ada69985;
+                                        transition:0.25s;
+                                    
+                                    }
+                                    &::before {
+                                        content:""; display:block;
+                                        width: 0px;height: 0px;
+                                        border-top:4px solid none;
+                                        border-bottom:4px solid #d8681e;
+                                        border-right: 4px solid transparent;
+                                        border-left: 4px solid  transparent;
+                                        position: absolute;bottom:0px;left:50%;margin-left:-2px;
+                                        transform: translateY(10px);opacity:0;
+                                        transition:0.5s;
+
+                                    }
+                                    &:hover {
+                                        color:#d8681e;
+                                        &::after{
+                                                background-color:#d8681e;
+                                            }
+                                            &::before {
+                                                transform: translateY(-5px);
+                                                opacity:1;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(5) {
+                    .sub {
+                        .subLeft{
+                            width:25%;height:300px;float:left;margin-top:30px;position: relative;transform:translateX(-90%);
+
+                            >div {
+                                width:200px; height:160px;
+                                background:url(../img/you1.jpg) no-repeat center/cover;
+                                filter:contrast(40%) brightness(1.4);
+    
+                            }
+                            >h2 {
+                                font:300 30px/1 'Jost'; color:#777;
+                                margin-bottom:6px;
+                            }
+                            >span {
+                                display:block;
+                                font: 300 12px/1 'Jost';color:#ada699;
+                                margin-bottom:40px;
+                            }
+                            &::before {
+                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                position:absolute;
+                                letter-spacing: 3px;
+                                bottom:49%; left:-80%;
+                                font: 200 8px/1 'Jost';color:#ada699;
+                                transform: rotate(-90deg);
+                            }
+                            &::after {
+                                content:"05";display: block;
+                                position:absolute;
+                                bottom:0px; right:0px;
+                                font: 200 14px/1 'Jost';color:#ada699;
+                            }
+                        }
+                        .subMid1 {
+                            width:20%;height:240px; float:left;
+                            box-sizing:border-box;
+                            padding:0px 10px;
+                            position: relative;
+                            >div {
+                                width:80%;height:200px;
+                                background:url(../img/you2.jpg) no-repeat center/cover;
+                                position:absolute;
+                                left:-90%;top:13%;
+                                filter:contrast(40%) brightness(1.4);
+                            }
+                            >h2 {
+                                font: 200 14px/1 'Jost';color:#ada699;
+                                position:absolute;right:40%;top:50%;
+                                width:130px;
+                            }
+                            span {
+                                display: block;width:130px;
+                                font: 200 11px/1 'Jost';color:#ada699;
+                                position:absolute;right:40%;top:57%;
+                                
+                            }
+                            a {
+                                display:block;
+                                width:60px;height:25px;
+                                color:#ada699;
+                                font: 200 10px/25px 'Jost';
+                                position:absolute;right:75%;top:88%;
+                                &:hover,&:focus{
+                                    color:#777;
+                                    &::before,&::after {
+                                        right:-10px;
+                                        background: #d8691e;
+                                    }
+                                }
+                                &::before {
+                                    content:"";display:block;
+                                    position:absolute; right:-5px;top:50px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                                &::after {
+                                    content:"";display:block;
+                                    position:absolute; right:-5px;top:53.5px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(-45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                        .subMid2 {
+                            width:20%; height:240px; float:left;box-sizing:border-box;
+                            padding:0px 10px;
+                            position:relative;
+                            >div {
+                                width:140%;height:180px;
+                                background:url(../img/you3.jpg) no-repeat center/cover;
+                                filter:contrast(40%) brightness(1.4);
+                                position:absolute;
+                                bottom:-50%;right:-20%;
+                            }
+                            >h2 {
+                                font: 200 30px/1 'Jost';color:#ada699;
+                                position: absolute;top:10%; right:-22%;
+                                width:270px;
+                            }
+                            span {
+                                display:block;
+                                font: 200 11px/1 'Jost';color:#ada699;
+                                position: absolute;top:30%; right:-28%;
+                                width:140px;
+                            }
+                            a {
+                                display:block;
+                                color:#ada699;
+                                font: 200 10px/25px 'Jost';
+                                width:60px;height:25px;
+                                position: absolute;left:-50%;bottom:-52%;
+                                &:hover,&:focus{
+                                    color:#777;
+                                    &::before,&::after {
+                                        left:-23px;
+                                        background: #d8691e;
+                                    }
+                                }
+                                &::before {
+                                    content:"";display:block;
+                                    position:absolute; left:-13px;top:53.5px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                                &::after {
+                                    content:"";display:block;
+                                    position:absolute; left:-13px;top:50px;margin-top:-40px;
+                                    width:5px; height:1px;
+                                    transform: rotate(-45deg);
+                                    background:#ada699;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                        >ul {
+                            width:30%;float:right;margin-top:20px;
+                            p {
+                                font:300 14px/40px 'Jost';
+                                text-align: center;
+                                color:#d8681e;
+                                margin-bottom:40px;
+    
+                            }
+                            li {
+                                width:50%;height:40px;float:left;
+                                a{  
+                                    display:block;width:100%; height:100%;position:relative;overflow: hidden;color:#999;
+                                    text-align:center;
+                                    font:300 13px/40px 'Jost';transition:0.1s;
+                                    
+                                    &::after {
+                                        content:""; position:absolute;left:10%; top:50%;transform:translateY(-50%); width: 6%; height:0.5px; border-radius:2px;background-color:#ada69985;
+                                        transition:0.25s;
+                                    
+                                    }
+                                    &::before {
+                                        content:""; display:block;
+                                        width: 0px;height: 0px;
+                                        border-top:4px solid none;
+                                        border-bottom:4px solid #d8681e;
+                                        border-right: 4px solid transparent;
+                                        border-left: 4px solid  transparent;
+                                        position: absolute;bottom:0px;left:50%;margin-left:-2px;
+                                        transform: translateY(10px);opacity:0;
+                                        transition:0.5s;
+
+                                    }
+                                    &:hover {
+                                        color:#d8681e;
+                                        &::after{
+                                                background-color:#d8681e;
+                                            }
+                                            &::before {
+                                                transform: translateY(-5px);
+                                                opacity:1;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(6) {
+                    .sub {
+                        .subLeft{
+                            width:25%;height:300px;float:left;margin-top:30px;position: relative;transform:translateX(-90%);
+
+                            >div {
+                                width:200px; height:160px;
+                                background:url(../img/gal4.jpg) no-repeat center/cover;
+                                filter:contrast(50%) brightness(1.2);
+    
+                            }
+                            >h2 {
+                                font:300 30px/1 'Jost'; color:#777;
+                                margin-bottom:6px;
+                            }
+                            >span {
+                                display:block;
+                                font: 300 12px/1 'Jost';color:#ada699;
+                                margin-bottom:40px;
+                            }
+                            &::before {
+                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                position:absolute;
+                                letter-spacing: 3px;
+                                bottom:49%; left:-80%;
+                                font: 200 8px/1 'Jost';color:#ada699;
+                                transform: rotate(-90deg);
+                            }
+                            &::after {
+                                content:"06";display: block;
+                                position:absolute;
+                                bottom:0px; right:0px;
+                                font: 200 14px/1 'Jost';color:#ada699;
+                            }
+                        }
+                        .subMid1 {
+                            width:40%;height:400px; float:left;
+                            box-sizing:border-box;
+                            padding:0px 10px;
+                            position: relative;
+                            >div {
+                                width:140%;height:160px;
+                                background:url(../img/gal5.jpg) no-repeat center/cover;
+                                position:absolute;
+                                left:-40%;bottom:20%;
+                                filter:contrast(60%) brightness(1.2);
+                            }
+                            >h2 {
+                                font: 300 20px/1 'Jost';color:#ada699;
+                                position:absolute;left:-40%;top:10%;
+                                width:80%;
+                            }
+                            span {
+                                display: block;width:80%;
+                                font: 200 11px/1.3 'Jost';color:#ada699;
+                                position:absolute;left:-40%;top:18%;
+                                &::after {
+                                    content:""; display: block;
+                                    width:5px; height:90px;
+                                    background: #e9e4dc;
+                                    position:absolute;
+                                    right:-73%;top:-90%;
+                                }
+                            }
+                        }
+                        >ul {
+                            width:30%;float:right;margin-top:20px;
+                            p {
+                                font:300 14px/40px 'Jost';
+                                text-align: center;
+                                color:#d8681e;
+                                margin-bottom:40px;
+    
+                            }
+                            li {
+                                width:50%;height:40px;float:left;
+                                a{  
+                                    display:block;width:100%; height:100%;position:relative;overflow: hidden;color:#999;
+                                    text-align:center;
+                                    font:300 13px/40px 'Jost';transition:0.1s;
+                                    
+                                    &::after {
+                                        content:""; position:absolute;left:10%; top:50%;transform:translateY(-50%); width: 6%; height:0.5px; border-radius:2px;background-color:#ada69985;
+                                        transition:0.25s;
+                                    
+                                    }
+                                    &::before {
+                                        content:""; display:block;
+                                        width: 0px;height: 0px;
+                                        border-top:4px solid none;
+                                        border-bottom:4px solid #d8681e;
+                                        border-right: 4px solid transparent;
+                                        border-left: 4px solid  transparent;
+                                        position: absolute;bottom:0px;left:50%;margin-left:-2px;
+                                        transform: translateY(10px);opacity:0;
+                                        transition:0.5s;
+
+                                    }
+                                    &:hover {
+                                        color:#d8681e;
+                                        &::after{
+                                                background-color:#d8681e;
+                                            }
+                                            &::before {
+                                                transform: translateY(-5px);
+                                                opacity:1;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(7) {
+                    .sub {
+                        .subLeft{
+                            width:25%;height:300px;float:left;margin-top:30px;position: relative;transform:translateX(-90%);
+
+                            >div {
+                                width:200px; height:160px;
+                                background:url(../img/lo1.jpg) no-repeat center/cover;
+                                filter:contrast(60%) brightness(1.2);
+    
+                            }
+                            >h2 {
+                                font:300 30px/1 'Jost'; color:#777;
+                                margin-bottom:6px;
+                            }
+                            >span {
+                                display:block;
+                                font: 300 12px/1 'Jost';color:#ada699;
+                                margin-bottom:40px;
+                            }
+                            &::before {
+                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                position:absolute;
+                                letter-spacing: 3px;
+                                bottom:49%; left:-80%;
+                                font: 200 8px/1 'Jost';color:#ada699;
+                                transform: rotate(-90deg);
+                            }
+                            &::after {
+                                content:"07";display: block;
+                                position:absolute;
+                                bottom:0px; right:0px;
+                                font: 200 14px/1 'Jost';color:#ada699;
+                            }
+                        }
+                        .subMid1 {
+                            width:40%;height:400px; float:left;
+                            box-sizing:border-box;
+                            padding:0px 10px;
+                            position: relative;
+                            
+                            >h2 {
+                                font: 300 24px/1 'Jost';color:#777;
+                                position:absolute;left:50%;top:20%;
+                                width:80%;
+                                transform: translateX(-50%);
+                                &::after {
+                                    content:""; display: block;
+                                    width:90px; height:2px;
+                                    background: #e9e4dc;
+                                    position:absolute;
+                                    right:50%;top:-90%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                            span {
+                                display: block;width:40%;
+                                font: 200 11px/1.5 'Jost';color:#ada699;
+                                position:absolute;left:-40%;top:50%;
+                            }
+                            >input[type="text"] {
+                                width:40%; height:30px;background: #ada6992a;
+                                border-radius: 5px;border:none;
+                                position:absolute;left:2%;
+                                box-sizing:border-box;
+                                padding:10px;
+                                font: 200 8px/1 'Jost';color:#ada699;
+                                &:nth-of-type(1){
+                                    top:50%;
+                                }
+                                &:nth-of-type(2){
+                                    top:60%;
+                                }
+                                &:nth-of-type(3){
+                                    width:60%; height:70px;
+                                    left:45%;top:50%;
+
+                                }
+                                
+                            }
+                        }
+                        >ul {
+                            width:30%;float:right;margin-top:20px;
+                            p {
+                                font:300 14px/40px 'Jost';
+                                text-align: center;
+                                color:#d8681e;
+                                margin-bottom:40px;
+    
+                            }
+                            li {
+                                width:50%;height:40px;float:left;
+                                a{  
+                                    display:block;width:100%; height:100%;position:relative;overflow: hidden;color:#999;
+                                    text-align:center;
+                                    font:300 13px/40px 'Jost';transition:0.1s;
+                                    
+                                    &::after {
+                                        content:""; position:absolute;left:10%; top:50%;transform:translateY(-50%); width: 6%; height:0.5px; border-radius:2px;background-color:#ada69985;
+                                        transition:0.25s;
+                                    
+                                    }
+                                    &::before {
+                                        content:""; display:block;
+                                        width: 0px;height: 0px;
+                                        border-top:4px solid none;
+                                        border-bottom:4px solid #d8681e;
+                                        border-right: 4px solid transparent;
+                                        border-left: 4px solid  transparent;
+                                        position: absolute;bottom:0px;left:50%;margin-left:-2px;
+                                        transform: translateY(10px);opacity:0;
+                                        transition:0.5s;
+
+                                    }
+                                    &:hover {
+                                        color:#d8681e;
+                                        &::after{
+                                                background-color:#d8681e;
+                                            }
+                                            &::before {
+                                                transform: translateY(-5px);
+                                                opacity:1;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+   }
+}
+// @media screen and (max-width:)

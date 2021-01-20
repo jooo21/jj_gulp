@@ -1,0 +1,129 @@
+#con5{
+    background:#fff;
+    .inner {
+        article{
+            &:nth-of-type(1){
+                float:left;width:27%;margin-right:7%;
+                h1 {
+                    font:300 24px/1.6 "Jost"; color:#3a3a50;text-align: left;
+                    margin-bottom:30px;
+                    &::before{
+                        content:""; display:block; width:80px; height:1px;
+                        background:#888;margin-bottom:20px;
+                    }&::after{
+                        content:""; display:block; width:80px; height:1px;
+                        background:#888;margin-top:20px;
+                    }
+                }
+                >p {
+                    font:300 14px/1.6 "Jost";color:#ada699;
+                }
+            }
+            &:nth-of-type(2) {
+                float:left;width:16%;padding:30px 20px;box-sizing:border-box;
+                position:relative;
+                &::after {
+                    content:""; display:block; width:1px; height:100%;background: #ada699;
+                    position: absolute;top:40px;right:-50px;
+                    
+                }
+                h2 {
+                    font:300 16px/1.6 "Jost"; color:#3a3a50;text-align: center;
+                    margin-bottom:30px;
+                }
+                div{
+                    width:100%;height:60px;
+                    &::after {
+                        content:""; display:block; clear:both;
+                    }
+                    i{
+                        display:block; width:30%; float:left;color:#ada699;
+                        text-align: center; font-size: 24px;line-height:60px;
+                    }
+                    span{
+                        display:block; width:70%;float:left;
+                        text-align: center;font:300 14px/60px "Jost";
+                    }
+                }
+            }
+            &:nth-of-type(3){
+                float:right; width:50%;margin-top:100px;position: relative;
+                opacity:0;transform:translateY(100px);transition:0.5s;
+                &::after {
+                    content:""; display:block; width:1px; height:90%;background: #ada699;
+                    position: absolute;top:100px;right:-40px;
+                    
+                }
+                ul.small {
+                    width:7%;float:left;margin-top:301px;
+                    margin-left:130px;
+                    li{
+                        width:100%;
+                        img{
+                            width:100%; height:47px;opacity:0.4;
+                            &:hover,&.on {
+                                opacity:1;
+                            }
+                        }
+                        
+                    }
+                }
+                .large {
+                    width:70%;height:450px;float:right;position:relative;
+                    img{
+                        width:100%; height:100%;
+                    }
+                    >p{
+                        position:absolute; left:10%; bottom:25px;
+                        font:300 34px/1.4 "Jost";color:#f2f2f2;
+                    }
+                    >a {
+                        display: block;width:80px; height:80px; background:#d8691e;
+                        position:absolute; right:0px; bottom:0px;text-align: center;transition:0.5s;
+                        i{
+                            color:#f2f2f2;line-height: 80px;
+                        }
+                        &:hover{
+                            background:#f2f2f2;
+                            i{
+                                color:#d8691e;
+                            }
+                        }
+                    }
+                }
+                >a{
+                    display:block; float:right;margin-right:180px;margin-top:20px;transition:0.5s;
+                        font:300 16px/1 "Jost";color:#3a3a50;letter-spacing: 1px;position:relative;
+                        i {
+                            &:nth-of-type(1){
+                            display:block;font-size:12px; line-height:12px;text-indent:20px;color:#8f8fa3;
+                            position:absolute; top:2.5px;right:-20px;transition:0.5s;
+                            }
+                            &:nth-of-type(2){
+                            display:block;font-size:12px; line-height:12px;text-indent:20px;color:#8f8fa3;
+                            position:absolute; top:2.5px;right:-20px;transition:0.5s;
+                            }
+                        
+                        }
+                        &:hover {
+                            transform:translateX(10%);color:#ada699;
+                            i{
+                            &:nth-of-type(1) {transform:translateX(30%);color:#d8691e;}
+                            &:nth-of-type(2) {transform:translateX(50%);color:#d8691e;}
+                            }
+                        }
+                }
+            }
+            
+        }
+    } 
+    &.on {
+        .inner{
+            article:nth-of-type(3){
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        } 
+        
+    }
+}

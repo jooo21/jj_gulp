@@ -1,0 +1,15 @@
+#con1 {
+    height:500px;
+    &::before {
+        content:""; 
+        width:100%; height:100%;
+        position:absolute; left:0px; top:0px;
+        background:url(../img/b3.png) no-repeat center/cover;
+        filter:contrast(60%);opacity: 0.8;
+    }
+    .inner{
+        position: relative;width:1180px;height:500px;margin:0px auto;padding:100px 0px;box-sizing:border-box;
+    }
+    
+}
+// @media screen 

@@ -1,0 +1,140 @@
+#con6 {
+    height:600px;
+    .inner {
+        width:1180px;height:600px;margin:0px auto;padding:50px 0px;box-sizing:border-box;
+        position: relative;
+        &::after {
+            content:""; display:block; clear: both;
+        }
+        .pubLeft {
+            float:left;width:50%;height:500px;position: relative;
+            background:#3a3a50;padding:80px 90px;box-sizing: border-box;
+            transform:translateY(-150px);
+            >p{
+                font:300 14px/1 "Jost";color:#f2f2f2;
+                margin-bottom:70px;
+            }
+            h1{
+                span{
+                    display:block;margin-bottom:10px;
+                    font:300 50px/1 "Jost";color:#ada699;
+                }
+                color:#f2f2f2;line-height: 1.2;margin-bottom:40px;
+            }
+            a {
+                float:left;display:block;width:160px;padding:20px;box-sizing:border-box;
+                font:300 10px/1 "Jost";color:#f2f2f2;text-align:center;transition:0.5s;background:#d8691e;
+                &:hover {
+                    background:#eee; color:#777;
+                }
+            }
+            
+        }
+        #slider {
+            float:right;width:50%;height:500px;
+            position: relative;
+            overflow: hidden;
+            .panel {
+                width:100%;height:100%;
+                li{
+                    width:100%; height:100%;position:absolute;
+                    top:0px; left:100%; 
+                    &.on{
+                        left:0%;
+                    }
+                    &[data-index="1"] {
+                        background:url(../img/li5.jpg) no-repeat center/cover;
+                        filter:contrast(40%) ;
+                    }
+                    &[data-index="2"] {
+                        background:url(../img/li1.jpg) no-repeat center/cover;
+                        filter:contrast(40%) ;
+                    }
+                    &[data-index="3"] {
+                        background:url(../img/li2.jpg) no-repeat center/cover;
+                        filter:contrast(40%) ;
+                    }
+                    &[data-index="4"] {
+                        background:url(../img/li3.jpg) no-repeat center/cover;
+                        filter:contrast(40%) ;
+                    }
+                }
+                
+            }
+            .navi {
+                position: absolute;
+                bottom: 10%;
+                right: -5px;
+                transform: rotate(90deg);
+                li {
+                    float: left; 
+                    margin-right: 20px;
+        
+                    a {
+                        display: block;
+                        width: 1px;
+                        height: 20px;
+                        background: #f2f2f2;
+                        &.on {
+                            background: #d8691e;
+                            transform:rotate(20deg) ;
+                        }
+                    }
+                    &:last-child{
+                        margin-right:0px;
+                    }
+                }
+            }
+            
+                
+            
+            
+            
+            
+        }
+        .prev {
+            display:block; width:50px; height:50px; background:#8f8a82;transition:0.5s;position: absolute;
+            bottom: 200px; 
+            left:50%;
+            transform:translateX(-50px) ;
+            &::before {
+                content:"";display: block;
+                width:10px; height:1px;
+                position:absolute;right:50%; bottom:50%;
+                transform: rotate(135deg) translate(-50%,-50%);
+                background:#fff;
+                transition: 1s;
+            }
+            &::after {
+                content:"";display: block;
+                width:10px; height:1px;
+                position:absolute;right:50%; bottom:50%;
+                transform: rotate(-135deg) translate(-50%,-50%);
+                background:#fff;
+                transition: 1s;
+            }
+        }
+        .next {
+            display:block; width:50px; height:50px; background:#d8691e;transition:0.5s; position: absolute;
+            bottom: 200px; 
+            left:50%;
+            &::before {
+                content:"";display: block;
+                width:10px; height:1px;
+                position:absolute;left:50%; top:50%;
+                transform: rotate(45deg) translate(-50%,-50%);
+                background:#fff;
+                transition: 1s;
+            }
+            &::after {
+                content:"";display: block;
+                width:10px; height:1px;
+                position:absolute;left:50%; top:50%;
+                transform: rotate(-45deg) translate(-50%,-50%);
+                background:#fff;
+                transition: 1s;
+            }
+        }
+    }
+}
+    

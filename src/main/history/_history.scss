@@ -1,0 +1,51 @@
+#con3 {
+    background:#eee;box-sizing:border-box;
+    .inner {
+        position: relative;
+        .top{
+            width:100%;
+            
+            >img {
+                width:45%; height:350px;float:left;
+                filter:grayscale(0.3) contrast(70%);
+            }
+            h1{
+                float:left; text-align: left;margin-top:30px; margin-left:50px;
+            }
+        }
+        .years{
+            width:900px;height:260px;padding:30px 50px;box-sizing: border-box;
+            background:#fff;position:absolute; right:0px;bottom:120px;
+            opacity:0;transform:translateX(100px);transition:0.5s;
+            >ul {
+                width:100%;margin-bottom:30px;
+                li{
+                    float:left;width:24%;height:50px;padding:10px 20px;box-sizing:border-box;
+                    border-bottom:2px solid #ada699;transition:0.5s;
+                    position:relative;margin-right:1%;
+                    font:normal 15px/30px "Cormorant Infant"; color:#555;text-align: center;
+                    &:last-child {
+                        margin-right:0px;
+                    }
+                }
+            }
+            .yearsP{
+                width:100%;padding:50px 20px;box-sizing:border-box;text-align: justify;
+                font:normal 18px/1.6 "Cormorant Infant"; color: #ada699;
+                em {
+                    display:block;font:normal 16px/1 "Jost"; color:#3a3a50;margin-bottom:17px;
+                }
+            }
+            
+        }
+    }
+    &:hover,&.on {
+        .inner{
+            .years{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        } 
+        
+    }
+}
